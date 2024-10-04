@@ -10,8 +10,7 @@ const router = express.Router();
 
 router.get('/', GiftsController.getGifts);
 
-router.get('/:giftId', (req,res) => {
-    res.status(200).sendFile(path.resolve(__dirname, '../public/gift.html'));
-});
+
+router.get('/:giftId', GiftsController.getGiftById);
 
 export default router;

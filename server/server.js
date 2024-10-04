@@ -1,13 +1,15 @@
 import './config/dotenv.js';
 import express from 'express';
 import giftsRouter from './routes/gifts.js';
+import cors from 'cors';
 
 const app = express();
-
 const PORT = process.env.PORT || 3001;
 
-app.use('/public', express.static('./public')); //defined a middleware function to serve static files from the public directory.
-app.use('/scripts', express.static('./public/scripts')) //defined a middleware function to serve static files from the public/scripts directory.
+app.use(cors());
+
+// app.use('/public', express.static('./public')); //defined a middleware function to serve static files from the public directory.
+// app.use('/scripts', express.static('./public/scripts')) //defined a middleware function to serve static files from the public/scripts directory.
 app.use('/gifts', giftsRouter); //defined a middleware function to use the giftsRouter for any requests to /gifts.
 
 app.get('/', (req, res) => {
