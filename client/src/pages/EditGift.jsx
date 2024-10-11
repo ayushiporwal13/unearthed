@@ -60,7 +60,7 @@ const EditGift = () => {
             method: 'DELETE'
         }
 
-        fetch(`gifts/${id}`, options);
+        fetch(`/gifts/${id}`, options);
         window.location = '/';
     }
 
