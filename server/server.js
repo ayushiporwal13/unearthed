@@ -7,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
+app.use(express.json()); //defined a middleware function to parse incoming requests with JSON payloads.
 
 // app.use('/public', express.static('./public')); //defined a middleware function to serve static files from the public directory.
 // app.use('/scripts', express.static('./public/scripts')) //defined a middleware function to serve static files from the public/scripts directory.

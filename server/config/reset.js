@@ -50,7 +50,6 @@ const seedGiftsTable = async () => {
             if (error) {
                 console.error('⚠️ error inserting gift', error);
             }
-
             console.log(`✅ ${gift.name} added successfully`)
         })
     })
